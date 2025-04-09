@@ -4,8 +4,8 @@ spring:
     name: gateway-service
   cloud:
     gateway:
-      default-filters:
-        - RewritePath=([^/])$, $1/ #Rewrite /
+#      default-filters:
+#        - RewritePath=([^/])$, $1/ #Rewrite /
       mvc:
         routes:
           - id: order-service-routes

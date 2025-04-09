@@ -23,7 +23,7 @@ public class OrderController {
         this.orderService = orderService;
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<Order> createOrder(@RequestBody OrderCreateRequest request){
         List<Product> products = orderService.fetchProducts(Arrays.asList(request.ids()));
         Order order = new Order(request.orderId(), request.customerName(), products);
